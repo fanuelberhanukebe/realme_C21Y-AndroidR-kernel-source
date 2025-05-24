@@ -17,8 +17,8 @@ jobs:
       ENABLE_CCACHE: "true" # Define and enable ccache
 
       # Clang
-      CLANG_REPO:  https://github.com/rifsxd/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git
-      CLANG_BRANCH: "lineage-20.0"
+      CLANG_REPO:  https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6573524.git
+      CLANG_BRANCH: "10.0"
       CC: clang
       CLANG_TRIPLE: aarch64-linux-gnu-
 
