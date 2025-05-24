@@ -12,7 +12,7 @@ jobs:
 
     env:
       OBJ_DIR: ${{ github.workspace }}/out
-      CONFIG: rmx3263_defconfig
+      CONFIG: sprd_sharkl5Pro_defconfig
       ARCH: arm64
       ENABLE_CCACHE: "true" # Define and enable ccache
 
