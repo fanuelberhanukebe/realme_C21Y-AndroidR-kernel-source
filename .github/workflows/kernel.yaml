@@ -12,7 +12,7 @@ jobs:
 
     env:
       OBJ_DIR: ${{ github.workspace }}/out
-      CONFIG: rmx3263_defconfig
+      CONFIG: sprd_sharkl5Pro_defconfig
       ARCH: arm64
       ENABLE_CCACHE: "true" # Define and enable ccache
 
@@ -147,10 +147,6 @@ jobs:
             CLANG_TRIPLE=${CLANG_TRIPLE} \
             CROSS_COMPILE=${CROSS_COMPILE} \
             CROSS_COMPILE_ARM32=${CROSS_COMPILE_ARM32} \
-            HOSTCC="${HOSTCC}" \
-            HOSTLD="${HOSTLD}" \
-            HOSTCFLAGS="${CURRENT_HOST_CFLAGS}" \
-            HOSTLDFLAGS="${CURRENT_HOST_LDFLAGS}" \
             -j$(nproc) # Use nproc for parallel jobs
 
       - name: Report result and Prepare for Upload
