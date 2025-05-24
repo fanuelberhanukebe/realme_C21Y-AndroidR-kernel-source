@@ -116,8 +116,8 @@ jobs:
 
           make O=${OBJ_DIR} ARCH=${ARCH} \
             LLVM=1 \
-            BSP_BUILD_ANDROID_OS=y \
-            BSP_BUILD_FAMILY=sharkl5Pro \
+            BSP_BUILD_ANDROID_OS="y" \
+            BSP_BUILD_FAMILY="sharkl5Pro" \
             CC="${CC_FOR_MAKE}" \
             CLANG_TRIPLE=${CLANG_TRIPLE} \
             CROSS_COMPILE=${CROSS_COMPILE} \
