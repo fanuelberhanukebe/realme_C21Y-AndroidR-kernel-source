@@ -117,7 +117,6 @@ jobs:
           # Already exported in defconfig step, but re-affirming for this scope is safe.
           export HOSTCC=clang
           export HOSTLD=ld.lld
-          # export HOSTAR=llvm-ar # Optional, if host tools need it
 
           export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig:${PKG_CONFIG_PATH}"
           YAML_HOST_CFLAGS="$(pkg-config --cflags yaml-0.1 2>/dev/null || echo '')"
@@ -129,7 +128,7 @@ jobs:
 
           make O=${OBJ_DIR} ARCH=${ARCH} \
             LLVM=1 \
-            LLVM_IAS=1 \ # Enable LLVM integrated assembler
+            LLVM_IAS=1 \
             BSP_BUILD_ANDROID_OS=${BSP_BUILD_ANDROID_OS} \
             BSP_BUILD_FAMILY=${BSP_BUILD_FAMILY} \
             BSP_BUILD_DT_OVERLAY=${BSP_BUILD_DT_OVERLAY} \
