@@ -152,7 +152,7 @@ jobs:
             HOSTLD="${HOSTLD}" \
             HOSTCFLAGS="${CURRENT_HOST_CFLAGS}" \
             HOSTLDFLAGS="${CURRENT_HOST_LDFLAGS}" \
-            -j$(nproc) # Use nproc for parallel jobs
+            -j2 # Use nproc for parallel jobs
 
       - name: Report result and Prepare for Upload
         id: report_and_prepare
